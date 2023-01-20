@@ -8,7 +8,7 @@ function App(props) {
   const { location, forecasts } = props;
 
   return (
-    <div className="app">
+    <div className="weather-app">
       <LocationDetails
         city={location.city}
         country={location.country}
