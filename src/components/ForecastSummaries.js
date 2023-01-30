@@ -9,7 +9,11 @@ function ForecastSummaries(props) {
         <div className="forecast-summaries">
             {forecasts.map((forecast) => {
                 return <ForecastSummary 
-                forecast={forecast} />
+                date={forecast.date}
+                description={forecast.description}
+                icon={forecast.icon}
+                temperature={forecast.temperature}
+                key={forecast.date} />
             })}
         </div>
     )

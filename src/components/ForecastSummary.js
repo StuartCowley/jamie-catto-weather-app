@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import WeatherIcon from 'react-icons-weather';
 
 function ForecastSummary(props) {
-  const { forecast } = props;
   const {
     date, temperature, description, icon,
-  } = forecast;
+  } = props;
   const formattedDate = new Date(date).toDateString();
+
   return (
     <div className="forecast-summary">
       <div className="forecast-summary__date">
@@ -28,14 +28,13 @@ function ForecastSummary(props) {
 }
 
 ForecastSummary.propTypes = {
-  forecasts: PropTypes.PropTypes.shape({
-    date: PropTypes.number,
+    date: PropTypes.number.isRequired,
     temperature: PropTypes.shape({
       max: PropTypes.number,
       min: PropTypes.number,
-    }),
-    description: PropTypes.string,
-    icon: PropTypes.string}).isRequired
+    }).isRequired,
+    description: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired
 };
 
 export default ForecastSummary;
