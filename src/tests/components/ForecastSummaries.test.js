@@ -28,4 +28,13 @@ describe('ForecastSummaries', () => {
         const { asFragment } = render(<ForecastSummaries forecasts={validProps} />);
         expect(asFragment()).toMatchSnapshot();
       });
+
+      it("renders the correct number of ForecastSummary instances", () => {
+        const { getAllByTestId } = render(
+          <ForecastSummaries forecasts={validProps} />
+        );
+    
+        expect(getAllByTestId("forecast-summary")).toHaveLength(2);
+        // Tests for how many elements have that test ID, which we assert is 2
+      });
 });
