@@ -16,7 +16,7 @@ function ForecastSummaries(props) {
 }
 
 ForecastSummaries.propTypes = {
-    forecasts: PropTypes.arrayOf(PropTypes.shape)
+    forecasts: PropTypes.arrayOf(PropTypes.shape).isRequired
 }
 
 export default ForecastSummaries;

@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 import LocationDetails from './LocationDetails';
 import ForecastSummaries from './ForecastSummaries';
 
-function App(props) {
-  const { location, forecasts } = props;
+function App({location, forecasts}) {
+  const {city, country} = location;
 
   return (
     <div className="weather-app">
       <LocationDetails
-        city={location.city}
-        country={location.country}
+        city={city}
+        country={country}
       />
       <ForecastSummaries forecasts={forecasts} />
     </div>
@@ -24,15 +24,15 @@ App.propTypes = {
     country: PropTypes.string,
   }).isRequired,
 
-  forecasts: PropTypes.shape({
+  forecasts: PropTypes.arrayOf(PropTypes.shape({
     date: PropTypes.number.isRequired,
     temperature: PropTypes.shape({
       max: PropTypes.number,
       min: PropTypes.number,
-    }).isRequired,
+    }),
     description: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
-  }).isRequired,
+  })).isRequired,
 };
 
 export default App;
