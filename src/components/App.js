@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LocationDetails from './LocationDetails';
 import ForecastSummaries from './ForecastSummaries';
+import ForecastDetails from './ForecastDetails';
 
 function App({location, forecasts}) {
   const {city, country} = location;
@@ -14,6 +15,7 @@ function App({location, forecasts}) {
         country={country}
       />
       <ForecastSummaries forecasts={forecasts} />
+      <ForecastDetails forecast={forecasts[0]} />
     </div>
   );
 }

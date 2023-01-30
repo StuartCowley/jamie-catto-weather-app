@@ -8,6 +8,6 @@ describe('LocationDetails', () => {
             <LocationDetails city="Manchester" country="UK"/>
         );
 
-        expect(getByText("Manchester, UK")).toBeTruthy;
+        expect(getByText("Manchester, UK")).toBeInstanceOf(HTMLHeadingElement);
     });
 });
