@@ -32,6 +32,7 @@ describe("ForecastSummary", () => {
         description={validProps.description}
         icon={validProps.icon}
         temperature={validProps.temperature}
+        onSelect={jest.fn()}
       />
     );
 
@@ -39,5 +40,6 @@ describe("ForecastSummary", () => {
     expect(getByText("Stub description")).toHaveAttribute("class", "forecast-summary__description");
     expect(getByTestId("forecast-icon")).toHaveClass("forecast-summary__icon");
     expect(getByText("22°C")).toHaveAttribute("class", "forecast-summary__temperature");
+    expect(getByTestId('forecast-btn')).toHaveTextContent('More details');
   });
 });

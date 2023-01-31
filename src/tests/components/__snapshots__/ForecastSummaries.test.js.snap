@@ -33,6 +33,12 @@ exports[`ForecastSummaries renders correctly 1`] = `
           name="owm"
         />
       </div>
+      <button
+        data-testid="forecast-btn"
+        type="button"
+      >
+        More details
+      </button>
     </div>
     <div
       class="forecast-summary"
@@ -62,6 +68,12 @@ exports[`ForecastSummaries renders correctly 1`] = `
           name="owm"
         />
       </div>
+      <button
+        data-testid="forecast-btn"
+        type="button"
+      >
+        More details
+      </button>
     </div>
   </div>
 </DocumentFragment>

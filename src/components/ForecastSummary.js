@@ -23,7 +23,9 @@ function ForecastSummary(props) {
       <div className="forecast-summary__icon" data-testid="forecast-icon">
         <WeatherIcon name="owm" iconId={icon}/>
       </div>
-      <button type="button" onClick={() => props.onSelect(date)}>More details</button>
+      <button type="button" onClick={() => props.onSelect(date)} data-testid="forecast-btn">
+        More details
+      </button>
     </div>
   );
 }
