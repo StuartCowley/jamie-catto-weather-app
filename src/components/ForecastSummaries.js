@@ -13,14 +13,16 @@ function ForecastSummaries(props) {
                 description={forecast.description}
                 icon={forecast.icon}
                 temperature={forecast.temperature}
-                key={forecast.date} />
+                key={forecast.date}
+                onSelect={props.onForecastSelect} />
             })}
         </div>
     )
 }
 
 ForecastSummaries.propTypes = {
-    forecasts: PropTypes.arrayOf(PropTypes.shape).isRequired
+    forecasts: PropTypes.arrayOf(PropTypes.shape).isRequired,
+    onForecastSelect: PropTypes.func.isRequired
 }
 
 export default ForecastSummaries;

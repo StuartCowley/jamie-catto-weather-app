@@ -23,6 +23,7 @@ function ForecastSummary(props) {
       <div className="forecast-summary__icon" data-testid="forecast-icon">
         <WeatherIcon name="owm" iconId={icon}/>
       </div>
+      <button type="button" onClick={() => props.onSelect(date)}>More details</button>
     </div>
   );
 }
@@ -34,7 +35,8 @@ ForecastSummary.propTypes = {
       min: PropTypes.number,
     }).isRequired,
     description: PropTypes.string.isRequired,
-    icon: PropTypes.string.isRequired
+    icon: PropTypes.string.isRequired,
+    onSelect: PropTypes.func.isRequired
 };
 
 export default ForecastSummary;
