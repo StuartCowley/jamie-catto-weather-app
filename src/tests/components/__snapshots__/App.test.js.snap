@@ -19,6 +19,7 @@ exports[`App renders correctly 1`] = `
         value=""
       />
       <button
+        data-testid="search__btn"
         type="submit"
       >
         Search
