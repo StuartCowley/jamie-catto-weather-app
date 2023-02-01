@@ -8,6 +8,7 @@ import ForecastDetails from './ForecastDetails';
 import SearchForm from './SearchForm';
 
 function App() {
+  const [errorMessage, setErrorMessage] = useState('');
   const [searchText, setSearchText] = useState('');
   const [forecasts, setForecasts] = useState([]);
   const [location, setLocation] = useState({ city: "", country: "" });
@@ -24,7 +25,7 @@ function App() {
   }
 
   const handleCitySearch = () => {
-    getForecast(setSelectedDate, setForecasts, setLocation, searchText);
+    getForecast(setSelectedDate, setForecasts, setLocation, setErrorMessage, searchText);
   }
 
   return (
@@ -32,13 +33,20 @@ function App() {
       <LocationDetails
         city={city}
         country={country}
+        errorMessage={errorMessage}
       />
       <SearchForm searchText={searchText}
       setSearchText={setSearchText}
       onSubmit={handleCitySearch} />
-      <ForecastSummaries forecasts={forecasts}
-      onForecastSelect={handleForecastSelect} />
-      {selectedForecast && (<ForecastDetails forecast={selectedForecast} />)}
+
+      {!errorMessage && (
+        <>
+        <ForecastSummaries forecasts={forecasts}
+        onForecastSelect={handleForecastSelect} />
+        {selectedForecast && (<ForecastDetails forecast={selectedForecast} />)}
+
+        </>
+      )}
     </div>
   );
 }
