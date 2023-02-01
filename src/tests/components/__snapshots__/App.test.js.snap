@@ -16,6 +16,7 @@ exports[`App renders correctly 1`] = `
       <input
         placeholder="Search..."
         type="text"
+        value=""
       />
       <button
         type="submit"
