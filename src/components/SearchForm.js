@@ -6,7 +6,7 @@ function SearchForm(props) {
         <div className="search-form">
             <input type="text"
             placeholder="Search..." />
-            <button type="button">Search</button>
+            <button type="submit">Search</button>
         </div>
     )
 }

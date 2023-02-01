@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="weather-app"
+  >
+    <h1
+      class="location-header"
+    >
+      , 
+    </h1>
+    <div
+      class="search-form"
+    >
+      <input
+        placeholder="Search..."
+        type="text"
+      />
+      <button
+        type="submit"
+      >
+        Search
+      </button>
+    </div>
+    <div
+      class="forecast-summaries"
+    />
+  </div>
+</DocumentFragment>
+`;
