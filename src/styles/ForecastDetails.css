@@ -1,0 +1,9 @@
+.forecast-details {
+    margin-top: 20px;
+    width: 10%;
+    padding-left: 45%;
+}
+
+.forecast-details > div {
+    margin-top: 3px;
+}
